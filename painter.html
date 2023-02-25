@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+ <head><title>This is JS file.</title></head>
+<body>
+    <h1>Painter entry Jitender Singh Guguloth</h1>
+<h2>Guess the Name</h2>
+
+
+<div class="container">
+<form>
+    <div class="form-group">
+      <label for="paintername">The hidden painter name:</label>
+      <input type="password" class="form-control" id="painter" aria-describedby="painterHelp" placeholder="Hidden Painter Name" value="Monet">
+      
+    </div>
+    <div class="form-group">
+      <label for="painter1">Guess the painter</label>
+      <input type="text" class="form-control" id="painter1" placeholder="Guess the painter">
+    </div>
+    
+    <button type="button" onclick="checkPainter()">Check the Guess</button>
+  </form>
+  <p id="result">Good count:0.<br>Opps count:0.</p>
+</div>
+<script> 
+ var good=0;
+    var oops =0; 
+
+function checkPainter (){
+    
+    if(document.getElementById("painter").value==document.getElementById("painter1").value){
+      alert('You got it right');
+      good=good+1;
+      oops=oops;
+    }else{
+        alert('Sorry');
+        good=good;
+        oops=oops+1;
+    }
+    document.getElementById("result").innerHTML='Good count:'+good+'.<br>Opps count :'+oops+'.';
+
+}
+</script>
+
+</body>
+</html> 
