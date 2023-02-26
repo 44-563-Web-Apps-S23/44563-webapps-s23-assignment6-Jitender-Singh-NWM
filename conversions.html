@@ -7,19 +7,32 @@
 
 <form>
     <label for="form1_age">Enter base amount </label>
-    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=50> <br>
+    <input type ="number" id="baseval" name="form1_age" min=10 max=50 step=2 value=50> <br>
 
     <label for="form1_nick">Enter the conversion rate </label>
-    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=35> <br> <br>
+    <input type ="number" id="convVal" name="form1_age" min=10 max=50 step=2 value=35> <br> <br>
 
-    <input type="button" onclick="resolveForm()" value="Show conversions">
+    <input type="button" onclick="convert()" value="Show conversions">
 </form>
 
 
 <p id="result">This text will be replaced </p>
 
 <script> 
-
+var toShow='';
+var outstr='';
+function convert(){
+    toShow='';
+var base=document.getElementById("baseval").value;
+var conv=document.getElementById("convVal").value;
+for (let i = 1; i <=5; i++) {
+    base=base*i;
+    toShow=toShow+base+' is '+base*conv+'; ';
+    
+}
+document.getElementById("result").innerHTML='Conversions are: '+toShow;
+    
+}
 function resolveForm (){
     console.log("Getting form values")
     age = document.getElementById("form1_age").value
