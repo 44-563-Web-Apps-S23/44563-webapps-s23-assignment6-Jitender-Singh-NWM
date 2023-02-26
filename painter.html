@@ -24,8 +24,12 @@
   </form>
   <p id="result">Good count:0.<br>Opps count:0.</p>
 </div>
+<div class="container">
+  <img src="Gaillardia.jpg" id="imgid" width="100" height="100" onclick="selectImage()">
+
+</div>
 <script> 
- var good=0;var oops =0; 
+ var good=0;var oops =0; var useImage=1;
 function checkPainter (){
     
     if(document.getElementById("painter").value==document.getElementById("painter1").value){
@@ -38,7 +42,24 @@ function checkPainter (){
         oops=oops+1;}
     document.getElementById("result").innerHTML='Good count:'+good+'.<br>Opps count :'+oops+'.';
 
-}</script>
+}
+
+function selectImage(){
+  
+ switch(useImage){
+  case 1:
+    useImage=2;document.getElementById("imgid").src="Lagerstroemia.jpg";break;
+  case 2:
+    useImage=3;document.getElementById("imgid").src="Osteospermum.jpg";break;
+  case 3:
+    useImage=1;document.getElementById("imgid").src="Gaillardia.jpg";break;
+
+
+ }
+
+}
+
+</script>
 
 </body>
 </html> 
