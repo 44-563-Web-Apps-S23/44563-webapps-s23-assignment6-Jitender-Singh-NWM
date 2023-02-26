@@ -18,6 +18,19 @@
 
 <p id="result">This text will be replaced </p>
 
+<form>
+<input type="radio" name="action" id="mean" name="average" value="mean">
+<label for="mean">Mean</label><br>
+<input type="radio" name="action" id="max" name="max" value="maximum">
+<label for="max">Max</label><br>
+<input type="radio" name="action" id="min" name="min" value="minimum">
+<label for="min">Min</label><br>    
+
+
+    <input type="button" onclick="chooseOp()" value="Get values from radio group">
+  </form>
+  <p id="result1">This text will be replaced </p>
+
 <script> 
 var toShow='';
 var outstr='';
@@ -25,14 +38,39 @@ function convert(){
     toShow='';
 var base=document.getElementById("baseval").value;
 var conv=document.getElementById("convVal").value;
+var base1=base;
 for (let i = 1; i <=5; i++) {
-    base=base*i;
-    toShow=toShow+base+' is '+base*conv+'; ';
+    console.log(2**i);
+    
+    toShow=toShow+base+' is '+Math.round(base*conv * 100) / 100+'; ';
+    base=base1*(2**i);
     
 }
 document.getElementById("result").innerHTML='Conversions are: '+toShow;
     
 }
+
+function chooseOp(){
+    toShow='';
+var base=document.getElementById("baseval").value;
+var conv=document.getElementById("convVal").value;
+var operation=document.querySelector('input[name="action"]:checked').value;
+console.log('operation',operation);
+console.log('conv',conv);
+var base1=base;
+if(operation=='minimum'){
+    document.getElementById("result1").innerHTML='min of '+base+' and '+conv+' is'+ Math.min(base,conv);
+}
+else if(operation=='maximum'){
+    document.getElementById("result1").innerHTML='max of '+base+' and '+conv+' is'+ Math.max(base,conv);
+}else if(operation=='mean'){
+
+}
+
+document.getElementById("result").innerHTML='Conversions are: '+toShow;
+    
+}
+
 function resolveForm (){
     console.log("Getting form values")
     age = document.getElementById("form1_age").value
