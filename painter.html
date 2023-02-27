@@ -29,7 +29,7 @@
 
 </div>
 <script> 
- var good=0;var oops =0; var useImage=1;
+ var good=0;var oops =0; var useImage=1;var counter=0;
 function checkPainter (){
     
     if(document.getElementById("painter").value==document.getElementById("painter1").value){
@@ -38,9 +38,12 @@ function checkPainter (){
       
     }else{
         alert('Sorry');
-       
+        counter=counter+1;
         oops=oops+1;}
     document.getElementById("result").innerHTML='Good count:'+good+'.<br>Opps count :'+oops+'.';
+    if(counter>10){
+      document.getElementById("result").innerHTML='Sorry, ran out of guesses..';
+    }
 
 }
 
