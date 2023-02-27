@@ -40,9 +40,9 @@
        my_candy_box={};
        function selectBox(){
         my_candy_box ={};
-        my_candy_box.dark=document.getElementById("chocolate").value;
-        my_candy_box.nuts=document.getElementById("nuts").value;
-        my_candy_box.chewy=document.getElementById("chewy").value;
+        my_candy_box.dark=document.getElementById("chocolate").checked;
+        my_candy_box.nuts=document.getElementById("nuts").checked;
+        my_candy_box.chewy=document.getElementById("chewy").checked;
         document.getElementById("resultval").innerHTML=JSON.stringify(my_candy_box);
         
     }
