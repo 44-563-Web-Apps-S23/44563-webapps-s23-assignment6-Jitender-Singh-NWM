@@ -20,7 +20,7 @@
       <input type="text" class="form-control" id="painter1" placeholder="Guess the painter">
     </div>
     
-    <button type="button" onclick="checkPainter()">Check the Guess</button>
+    <button type="button" id="togglee" onclick="checkPainter()">Check the Guess</button>
   </form>
   <p id="result">Good count:0.<br>Opps count:0.</p>
 </div>
@@ -43,6 +43,8 @@ function checkPainter (){
     document.getElementById("result").innerHTML='Good count:'+good+'.<br>Opps count :'+oops+'.';
     if(counter>10){
       document.getElementById("result").innerHTML='Sorry, ran out of guesses.';
+      document.getElementById('togglee').style.visibility = 'hidden';
+
     }
 
 }
