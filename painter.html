@@ -31,7 +31,6 @@
 <script> 
  var good=0;var oops =0; var useImage=1;var counter=0;
 function checkPainter (){
-    
     if(document.getElementById("painter").value==document.getElementById("painter1").value){
       alert('You got it right');
       good=good+1;
@@ -43,12 +42,8 @@ function checkPainter (){
     document.getElementById("result").innerHTML='Good count:'+good+'.<br>Opps count :'+oops+'.';
     if(counter>10){
       document.getElementById("result").innerHTML='Sorry, ran out of guesses.';
-      document.getElementById('togglee').style.visibility = 'hidden';
-
-    }
-
+      document.getElementById('togglee').style.visibility = 'hidden'; }
 }
-
 function selectImage(){
   
  switch(useImage){
@@ -58,12 +53,8 @@ function selectImage(){
     useImage=3;document.getElementById("imgid").src="Osteospermum.jpg";break;
   case 3:
     useImage=1;document.getElementById("imgid").src="Gaillardia.jpg";break;
-
-
  }
-
 }
-
 </script>
 
 </body>
