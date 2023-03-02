@@ -23,11 +23,11 @@
 <form>
     <div class="form-group">
 <input type="radio" name="action" id="mean" name="average" value="mean">
-<label for="mean">Mean</label><br>
+<label for="mean">average</label><br>
 <input type="radio" name="action" id="max" name="max" value="maximum">
-<label for="max">Max</label><br>
+<label for="max">max</label><br>
 <input type="radio" name="action" id="min" name="min" value="minimum">
-<label for="min">Min</label><br> 
+<label for="min">min</label><br> 
 </form>   
 
 
@@ -68,7 +68,7 @@ if(operation=='minimum'){
 }
 else if(operation=='maximum'){
     document.getElementById("result1").innerHTML='Max of '+base+' and '+conv+' is '+ Math.max(base,conv);
-}else if(operation=='mean'){
+}else if(operation=='average'){
     document.getElementById("result1").innerHTML='Mean of '+base+' and '+conv+' is '+ (parseInt(base) + parseInt(conv))/2;
 }
 
