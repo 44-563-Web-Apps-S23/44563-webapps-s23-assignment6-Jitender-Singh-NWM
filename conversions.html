@@ -47,11 +47,8 @@ var base=document.getElementById("baseval").value;
 var conv=document.getElementById("convVal").value;
 var base1=base;
 for (let i = 1; i <=5; i++) {
-console.log(2**i);
-
 toShow=toShow+base+' is '+Math.round(base*conv * 100) / 100+'; ';
 base=base1*(2**i);
-
 }
 document.getElementById("result").innerHTML='Conversions are: '+toShow;
 }
@@ -60,13 +57,10 @@ function chooseOp(){
 var base=document.getElementById("baseval").value;
 var conv=document.getElementById("convVal").value;
 var operation=document.querySelector('input[name="action"]:checked').value;
-console.log('operation',operation);
-console.log('conv',conv);
 var base1=base;
 if(operation=='minimum'){
 document.getElementById("result1").innerHTML='min of '+base+' and '+conv+' is '+ Math.min(base,conv);
-}
-else if(operation=='maximum'){
+}else if(operation=='maximum'){
 document.getElementById("result1").innerHTML='max of '+base+' and '+conv+' is '+ Math.max(base,conv);
 }else if(operation=='mean'){
 document.getElementById("result1").innerHTML='mean of '+base+' and '+conv+' is '+ (parseInt(base) + parseInt(conv))/2;
