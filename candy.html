@@ -2,12 +2,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <head><title>This is Conversion file.</title></head>
 <body>
-  <h1>Jitender Singh Guguloth Candy</h1>
+  <h1>Jitender Singh Guguloth chooses candy</h1>
     <div class="container">
       <div class="form-group">
     <form>
         <input type="checkbox" id="chocolate" name="topping1"   
-          value="True" checked>
+          value="True">
         <label for="cb1_cheese">Dark Chocolate</label></br>
       
         <input type="checkbox" id="nuts" name="topping2" 
@@ -15,7 +15,7 @@
         <label for="cb1_olive">Nuts</label></br>
       
         <input type="checkbox" id="chewy" name="topping3"   
-           value="False" checked>
+           value="False">
         <label for="cb1_onion">Chewy</label></br>
 
         <input type="button" class="btn btn-primary" onclick="selectBox()" value="Select a box">
@@ -48,8 +48,8 @@
     }
     function updateBox(){
        
-        my_candy_box.size=document.getElementById("size").value;
-        my_candy_box.price=document.getElementById("price").value;
+        my_candy_box["size"]=document.getElementById("size").value;
+        my_candy_box["price"]=document.getElementById("price").value;
         
         document.getElementById("resultvalnew").innerHTML=JSON.stringify(my_candy_box);
         
